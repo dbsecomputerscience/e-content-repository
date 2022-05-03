@@ -1,0 +1,45 @@
+<div *ngIf="headerVisible" style="overflow-y: hidden;">
+  <div class="header">
+  </div>
+
+  <mat-toolbar color="primary" style="height: 45px;">
+    <button mat-raised-button color="accent" class="button" style="background-color: red;" [matMenuTriggerFor]="menuCurriculum">Curriculum</button>
+    <button mat-raised-button color="accent" class="button" style="background-color: greenyellow;" [matMenuTriggerFor]="menuWrksheet">Worksheet/Activities</button>
+    <button mat-raised-button color="accent" class="button" style="background-color: rgb(209, 209, 47);" [matMenuTriggerFor]="menuTutorials">Tutorials</button>
+    <button mat-raised-button color="accent" class="button" style="background-color:  coral;" [matMenuTriggerFor]="menuCaseStudies">Case Studies</button>
+    <button mat-raised-button color="accent" class="button" style="background-color:  rgb(88, 187, 182);" [matMenuTriggerFor]="menuEExhibitions">E-Exhibitions</button>
+    <button mat-raised-button color="accent" class="button" style="background-color:  rgb(88, 187, 182);min-width: 250px;" [matMenuTriggerFor]="menuMindmap">Mindmap/Concept-Maping</button>
+  </mat-toolbar>
+</div>
+
+<mat-menu #menuCurriculum="matMenu">
+  <button mat-menu-item>Students Padegogy companion</button>
+  <button mat-menu-item>Teacher Padegogy  companion</button>
+</mat-menu>
+
+<mat-menu #menuWrksheet="matMenu">
+  <button mat-menu-item>FOUNDATION(1 TO2)</button>
+  <button mat-menu-item>MIDDLE</button>
+  <button mat-menu-item>SECONDARY</button>
+  <button mat-menu-item>SR. SECONDARY</button>
+  <button mat-menu-item>ANALYSIS & REPORT GENERATION</button>
+</mat-menu>
+
+<mat-menu #menuTutorials="matMenu">
+  <button mat-menu-item>Animated Videos</button>
+  <button mat-menu-item>Videos from teacher</button>
+</mat-menu>
+
+<mat-menu #menuCaseStudies="matMenu">
+  <button mat-menu-item>Demo Class Videos</button>
+</mat-menu>
+
+<mat-menu #menuEExhibitions="matMenu">
+  <button mat-menu-item>Art Gallery of Students</button>
+</mat-menu>
+
+<mat-menu #menuMindmap="matMenu">
+  <button mat-menu-item>Conceptual/Topic wise mind mapping</button>
+</mat-menu>
+
+<router-outlet></router-outlet>

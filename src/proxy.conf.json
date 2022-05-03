@@ -1,0 +1,6 @@
+{
+  "/api": {
+  "target": "https://dbsequiz.web.app/home",
+  "secure": false
+  }
+  }

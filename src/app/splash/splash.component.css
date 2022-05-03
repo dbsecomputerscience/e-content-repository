@@ -1,0 +1,123 @@
+
+  #box {
+    background:url(https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg);
+    background-size:cover;
+    border:2px solid #000;
+    border-radius:50%;
+    width:600px;
+    height:600px;
+    animation: movimiento 5s linear 0s infinite;
+    box-shadow:0 0 25px RGBA(255,255,255, 0.10),
+               -8px -8px 15px #000 inset,
+               2px 2px 25px #000 inset,
+               -45px -45px 25px RGBA(0,0,0, 0.5) inset,
+               25px 25px 45px RGBA(0,0,0, 0.45) inset;
+    margin:2em auto;
+    transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+  }
+
+  @keyframes movimiento {
+    0% { background-position:0 0 }
+    100% { background-position:355px 0 }
+  }
+
+  @keyframes stars {
+    0% { background-position:0 0 }
+    100% { background-position:0 100% }
+  }
+
+  @keyframes mask-move {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(280px);
+    }
+  }
+  @keyframes mask-inner-move {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-280px);
+    }
+  }
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  body, html {
+    height: 100%;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #000000; */
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+  .focus {
+    margin-top: 50%;
+    margin-left: 15%;
+    font-size: 8rem;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 0.2rem;
+    line-height: 1;
+    position: relative;
+    width: 179px;
+    transform:rotateX(-6deg) rotateY(-6deg) rotateZ(-6deg);
+
+  }
+  .focus:before {
+    content: 'DBSE';
+    filter: blur(5px);
+  }
+  .focus:after {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: calc(100% + 8px);
+    top: -4px;
+    left: 0;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    animation: mask-move 1.5s linear infinite alternate;
+  }
+  .focus--mask {
+    overflow: hidden;
+    position: absolute;
+    width: 90px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #186908;
+    animation: mask-move 1.5s linear infinite alternate;
+  }
+  .focus--mask-inner {
+    animation: mask-inner-move 1.5s linear infinite alternate;
+  }
+/*
+  .image{
+      background-image: url(../Repository\ Design/delhi.png);
+  } */
+
+  .logo{
+    /* position: relative; */
+    margin-top: 90px;
+    margin-left: 70px;
+    width: 500px;
+    height:400px;
+    transform:rotateX(-6deg) rotateY(-6deg) rotateZ(-6deg);
+
+  }
+
+  .childlogo{
+    cursor: pointer;
+    margin-top: -240px;
+    margin-left: 230px;
+    position: fixed;
+    transform:rotateX(-6deg) rotateY(-6deg) rotateZ(-6deg);
+
+  }
