@@ -9,12 +9,25 @@ import { ObservableDataService } from './services/observable-data.service';
 })
 export class AppComponent {
   title = 'e-content-repository';
+  levelOneTrigger:any;
   headerVisible=true;
   constructor(private router: Router, private observableDataService:ObservableDataService){
     this.observableDataService.headerVisible.subscribe(value =>{
       this.headerVisible = value;
     });
     this.router.navigate(['/splash']);
+  }
+
+  menuLeave(){
+    console.log('leave')
+  }
+
+  studentPedagogyClick(){
+    this.router.navigate(['/studentpadegogycompanion']);
+  }
+
+  teacherPedagogyClick(){
+    this.router.navigate(['/teacherpadegogycompanion']);
   }
 
   logoclick(){

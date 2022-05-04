@@ -14,13 +14,37 @@ import { HttpClientModule } from  '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { StudentsPadegogyCompanionComponent } from './students-padegogy-companion/students-padegogy-companion.component';
+import { TeacherPadegogyCompanionComponent } from './teacher-padegogy-companion/teacher-padegogy-companion.component';
+import { FoundationComponent } from './foundation/foundation.component';
+import { MiddleComponent } from './middle/middle.component';
+import { SecondaryComponent } from './secondary/secondary.component';
+import { SrSecondaryComponent } from './sr-secondary/sr-secondary.component';
+import { AnalysisComponent } from './analysis/analysis.component';
+import { AnimatedVideosComponent } from './animated-videos/animated-videos.component';
+import { VideosFromTeacherComponent } from './videos-from-teacher/videos-from-teacher.component';
+import { DemoClassVideosComponent } from './demo-class-videos/demo-class-videos.component';
+import { ArtGalleryStudentComponent } from './art-gallery-student/art-gallery-student.component';
+import { MindMappingComponent } from './mind-mapping/mind-mapping.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SplashComponent,
-    QuizesComponent
+    QuizesComponent,
+    StudentsPadegogyCompanionComponent,
+    TeacherPadegogyCompanionComponent,
+    FoundationComponent,
+    MiddleComponent,
+    SecondaryComponent,
+    SrSecondaryComponent,
+    AnalysisComponent,
+    AnimatedVideosComponent,
+    VideosFromTeacherComponent,
+    DemoClassVideosComponent,
+    ArtGalleryStudentComponent,
+    MindMappingComponent
   ],
   imports: [
     BrowserModule,
