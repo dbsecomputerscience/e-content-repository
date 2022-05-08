@@ -1,48 +1,57 @@
 <div *ngIf="headerVisible" style="overflow-y: hidden;">
-  <div class="header">
-  </div>
+  <div class="header"></div>
 
   <mat-toolbar color="primary" style="height: 45px;">
-    <button mat-raised-button color="accent" class="button" style="background-color: red;" [matMenuTriggerFor]="menuCurriculum" #menuCurriculumTrigger="matMenuTrigger" >Curriculum</button>
-    <button mat-raised-button color="accent" class="button" style="background-color: greenyellow;min-width: 200px;" [matMenuTriggerFor]="menuWrksheet">Worksheet/Activities</button>
-    <button mat-raised-button color="accent" class="button" style="background-color: rgb(209, 209, 47);" [matMenuTriggerFor]="menuTutorials">Tutorials</button>
-    <button mat-raised-button color="accent" class="button" style="background-color: rgb(209, 209, 47);" [routerLink]="['quizes']">Quizes</button>
-    <button mat-raised-button color="accent" class="button" style="background-color:  coral;" [matMenuTriggerFor]="menuCaseStudies">Case Studies</button>
-    <button mat-raised-button color="accent" class="button" style="background-color:  rgb(88, 187, 182);" [matMenuTriggerFor]="menuEExhibitions">E-Exhibitions</button>
-    <button mat-raised-button color="accent" class="button" style="background-color:  rgb(88, 187, 182);min-width: 250px;" [matMenuTriggerFor]="menuMindmap">Mindmap/Concept-Maping</button>
+    <button mat-raised-button color="accent" class="button" style="background-color: red;" [matMenuTriggerFor]="menuCurriculum" #menuCurriculumTrigger="matMenuTrigger" (mouseenter)="menuCurriculumTrigger.openMenu()">Curriculum</button>
+    <button mat-raised-button color="accent" class="button" style="background-color: greenyellow;min-width: 200px;" [matMenuTriggerFor]="menuWrksheet" #menuWrksheetTrigger="matMenuTrigger" (mouseenter)="menuWrksheetTrigger.openMenu()">Worksheet/Activities</button>
+    <button mat-raised-button color="accent" class="button" style="background-color: rgb(209, 209, 47);" [matMenuTriggerFor]="menuTutorials" #menuTutorialsTrigger="matMenuTrigger" (mouseenter)="menuTutorialsTrigger.openMenu()">Tutorials</button>
+    <button mat-raised-button color="accent" class="button" style="background-color: rgb(187, 187, 121);" [routerLink]="['quizes']">Quizes</button>
+    <button mat-raised-button color="accent" class="button" style="background-color:  coral;" [matMenuTriggerFor]="menuCaseStudies" #menuCaseStudiesTrigger="matMenuTrigger" (mouseenter)="menuCaseStudiesTrigger.openMenu()">Case Studies</button>
+    <button mat-raised-button color="accent" class="button" style="background-color:  rgb(88, 187, 182);" [matMenuTriggerFor]="menuEExhibitions" #menuEExhibitionsTrigger="matMenuTrigger" (mouseenter)="menuEExhibitionsTrigger.openMenu()">E-Exhibitions</button>
+    <button mat-raised-button color="accent" class="button" style="background-color:  rgb(125, 211, 143);min-width: 250px;" [matMenuTriggerFor]="menuMindmap" #menuMindmapTrigger="matMenuTrigger" (mouseenter)="menuMindmapTrigger.openMenu()">Mindmap/Concept-Maping</button>
   </mat-toolbar>
+
+  <mat-menu #menuCurriculum="matMenu" class="customize">
+    <span (mouseleave)="menuCurriculumTrigger.closeMenu()">
+      <button mat-menu-item [routerLink]="['studentpadegogycompanion']">Students Padegogy companion</button>
+      <button mat-menu-item [routerLink]="['teacherpadegogycompanion']">Teacher Padegogy  companion</button>
+    </span>
+  </mat-menu>
+
+  <mat-menu #menuWrksheet="matMenu">
+    <span (mouseleave)="menuWrksheetTrigger.closeMenu()">
+      <button mat-menu-item [routerLink]="['foundation']">FOUNDATION(1 TO 2)</button>
+      <button mat-menu-item [routerLink]="['middle']">MIDDLE</button>
+      <button mat-menu-item [routerLink]="['secondary']">SECONDARY</button>
+      <button mat-menu-item [routerLink]="['srsec']">SR. SECONDARY</button>
+      <button mat-menu-item [routerLink]="['analysis']">ANALYSIS & REPORT GENERATION</button>
+    </span>
+  </mat-menu>
+
+  <mat-menu #menuTutorials="matMenu">
+    <span (mouseleave)="menuTutorialsTrigger.closeMenu()">
+      <button mat-menu-item [routerLink]="['animatedvideos']">Animated Videos</button>
+      <button mat-menu-item [routerLink]="['videosfromteacher']">Videos from teacher</button>
+    </span>
+  </mat-menu>
+
+  <mat-menu #menuCaseStudies="matMenu">
+    <span (mouseleave)="menuCaseStudiesTrigger.closeMenu()">
+      <button mat-menu-item [routerLink]="['democlassvideos']">Demo Class Videos</button>
+    </span>
+  </mat-menu>
+
+  <mat-menu #menuEExhibitions="matMenu">
+    <span (mouseleave)="menuEExhibitionsTrigger.closeMenu()">
+      <button mat-menu-item [routerLink]="['artgallerystudent']">Art Gallery of Students</button>
+    </span>
+  </mat-menu>
+
+  <mat-menu #menuMindmap="matMenu">
+    <span (mouseleave)="menuMindmapTrigger.closeMenu()">
+      <button mat-menu-item [routerLink]="['mindmapping']">Conceptual/Topic wise mind mapping</button>
+    </span>
+  </mat-menu>
 </div>
-<!-- (mouseleave)="menuCurriculumTrigger.closeMenu()" -->
-<mat-menu #menuCurriculum="matMenu">
-  <span class="locations">
-    <button mat-menu-item [routerLink]="['studentpadegogycompanion']">Students Padegogy companion</button>
-    <button mat-menu-item [routerLink]="['teacherpadegogycompanion']">Teacher Padegogy  companion</button>
-  </span>
-</mat-menu>
-
-<mat-menu #menuWrksheet="matMenu">
-  <button mat-menu-item [routerLink]="['foundation']">FOUNDATION(1 TO 2)</button>
-  <button mat-menu-item [routerLink]="['middle']">MIDDLE</button>
-  <button mat-menu-item [routerLink]="['secondary']">SECONDARY</button>
-  <button mat-menu-item [routerLink]="['srsec']">SR. SECONDARY</button>
-  <button mat-menu-item [routerLink]="['analysis']">ANALYSIS & REPORT GENERATION</button>
-</mat-menu>
-
-<mat-menu #menuTutorials="matMenu">
-  <button mat-menu-item [routerLink]="['animatedvideos']">Animated Videos</button>
-  <button mat-menu-item [routerLink]="['videosfromteacher']">Videos from teacher</button>
-</mat-menu>
-
-<mat-menu #menuCaseStudies="matMenu">
-  <button mat-menu-item [routerLink]="['democlassvideos']">Demo Class Videos</button>
-</mat-menu>
-
-<mat-menu #menuEExhibitions="matMenu">
-  <button mat-menu-item [routerLink]="['artgallerystudent']">Art Gallery of Students</button>
-</mat-menu>
-
-<mat-menu #menuMindmap="matMenu">
-  <button mat-menu-item [routerLink]="['mindmapping']">Conceptual/Topic wise mind mapping</button>
-</mat-menu>
 
 <router-outlet></router-outlet>

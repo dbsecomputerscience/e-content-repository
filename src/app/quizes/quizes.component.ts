@@ -17,7 +17,11 @@ export class QuizesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  fetchQuizAdmin(){
+  goToQuizAdmin(){
+    window.open('https://dbsequizadmin.web.app', "_blank");
+  }
+
+  goToQuizes(){
     window.open('https://dbsequiz.web.app/home', "_blank");
   }
 

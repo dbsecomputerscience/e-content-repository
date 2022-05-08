@@ -12,4 +12,8 @@ export class AnalysisComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onClick(){
+    alert('hi there')
+  }
+
 }

@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
+import { MatMenuTrigger } from '@angular/material/menu';
 import { Router } from '@angular/router';
 import { ObservableDataService } from './services/observable-data.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'e-content-repository';
   levelOneTrigger:any;
+  menuCurriculumTrigger:any;
   headerVisible=true;
   constructor(private router: Router, private observableDataService:ObservableDataService){
     this.observableDataService.headerVisible.subscribe(value =>{

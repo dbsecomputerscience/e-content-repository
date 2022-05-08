@@ -26,6 +26,7 @@ import { VideosFromTeacherComponent } from './videos-from-teacher/videos-from-te
 import { DemoClassVideosComponent } from './demo-class-videos/demo-class-videos.component';
 import { ArtGalleryStudentComponent } from './art-gallery-student/art-gallery-student.component';
 import { MindMappingComponent } from './mind-mapping/mind-mapping.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { MindMappingComponent } from './mind-mapping/mind-mapping.component';
     HttpClientModule,
     MatGridListModule,
     MatMenuModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
