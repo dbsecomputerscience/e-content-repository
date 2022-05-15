@@ -27,6 +27,9 @@ import { DemoClassVideosComponent } from './demo-class-videos/demo-class-videos.
 import { ArtGalleryStudentComponent } from './art-gallery-student/art-gallery-student.component';
 import { MindMappingComponent } from './mind-mapping/mind-mapping.component';
 import {MatCardModule} from '@angular/material/card';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -58,7 +61,9 @@ import {MatCardModule} from '@angular/material/card';
     MatGridListModule,
     MatMenuModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    NgbModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

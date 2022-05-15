@@ -7,18 +7,15 @@
 .header {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: url("../assets/images/banner.png");
-
-min-height: 145px;
-padding: 0px;
-width: 100%;
-margin-bottom: 6px;
-background-repeat: no-repeat;
-overflow: hidden;
-align-items: center;
-overflow: hidden;
-float: right;
+  min-height: 200px;
+  padding: 0px;
+  width: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  align-items: center;
+  overflow: hidden;
+  float: right;
 }
-
 
 .button{
   margin-left: 10px;
@@ -30,5 +27,21 @@ float: right;
 /* ::ng-deep .customize{
   background-color: black;
 } */
+
+.homeicon{
+  font-size: 30px;
+}
+
+.iconcontainer{
+  width: 36px;
+  height: 36px;
+  padding-right: 20px;
+  background-color: blueviolet;
+}
+
+.iconcontainer:hover{
+  background-color: orangered;
+}
+
 
 
