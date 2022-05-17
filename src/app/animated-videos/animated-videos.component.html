@@ -24,24 +24,21 @@
   </div>
 </form>
 
-<div *ngIf="videoData" class="row">
-  <div *ngFor="let video of videoData[0].videos">
+<!-- <div *ngIf="videoData" style="width: 100%;" >
+  <div *ngFor="let video of videoData[0].videos" style="width: 350px;" class="row">
     <iframe width="320" height="215"
     [src]="this._sanitizer.bypassSecurityTrustResourceUrl(video)">
     </iframe>
   </div>
-</div>
+</div> -->
 
-<!-- <div>
-  <iframe width="320" height="215"
-  src="https://www.youtube.com/watch?v=fE6Y7n-YUuU">
-  </iframe>
-</div>
-<div>
-  <iframe width="320" height="215"
-  src="https://www.youtube.com/watch?v=VxBEmaaSh1c">
-  </iframe>
-</div>
--->
+<mat-grid-list *ngIf="videoData" cols="4">
+  <mat-grid-tile *ngFor="let video of videoData[0].videos" >
+    <iframe width="560" height="250" frameborder="0" allowfullscreen class="framestyle"
+    [src]="this._sanitizer.bypassSecurityTrustResourceUrl(video)">
+    </iframe>
+  </mat-grid-tile>
+</mat-grid-list>
+
 
 

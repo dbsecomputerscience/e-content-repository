@@ -13,3 +13,10 @@
 }
 
 /* body { height: 100%; overflow: hidden; } */
+
+.framestyle{
+  margin-left: 20px;
+  border: 2px;
+  border-style: solid;
+
+}
