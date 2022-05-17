@@ -5,12 +5,12 @@
     <button mat-raised-button class="iconcontainer" [routerLink]="['splash/home']">
       <mat-icon aria-hidden="false" class="homeicon" aria-label="Example home icon">home</mat-icon>
     </button>
-    <button mat-raised-button class="button" style="background-color: red;" [matMenuTriggerFor]="menuCurriculum" #menuCurriculumTrigger="matMenuTrigger" (mouseenter)="menuCurriculumTrigger.openMenu()">Curriculum</button>
+    <button mat-raised-button class="button" style="background-color: rgb(255, 0, 200);" [matMenuTriggerFor]="menuCurriculum" #menuCurriculumTrigger="matMenuTrigger" (mouseenter)="menuCurriculumTrigger.openMenu()">Curriculum</button>
     <button mat-raised-button class="button" style="background-color: greenyellow;min-width: 200px;" [matMenuTriggerFor]="menuWrksheet" #menuWrksheetTrigger="matMenuTrigger" (mouseenter)="menuWrksheetTrigger.openMenu()">Worksheet/Activities</button>
     <button mat-raised-button class="button" style="background-color: rgb(209, 209, 47);" [matMenuTriggerFor]="menuTutorials" #menuTutorialsTrigger="matMenuTrigger" (mouseenter)="menuTutorialsTrigger.openMenu()">Tutorials</button>
-    <button mat-raised-button class="button" style="background-color: rgb(187, 187, 121);" [routerLink]="['quizes']">Quizes</button>
-    <button mat-raised-button class="button" style="background-color:  coral;" [matMenuTriggerFor]="menuCaseStudies" #menuCaseStudiesTrigger="matMenuTrigger" (mouseenter)="menuCaseStudiesTrigger.openMenu()">Case Studies</button>
-    <button mat-raised-button class="button" style="background-color:  rgb(88, 187, 182);" [matMenuTriggerFor]="menuEExhibitions" #menuEExhibitionsTrigger="matMenuTrigger" (mouseenter)="menuEExhibitionsTrigger.openMenu()">E-Exhibitions</button>
+    <button mat-raised-button class="button" style="background-color: rgb(187, 187, 121);" [routerLink]="['quizes']">Quizzes</button>
+    <button mat-raised-button class="button" style="background-color:  coral;min-width: 200px;" [matMenuTriggerFor]="menuCaseStudies" #menuCaseStudiesTrigger="matMenuTrigger" (mouseenter)="menuCaseStudiesTrigger.openMenu()">Innovative Practices</button>
+    <button mat-raised-button class="button" style="background-color:  rgb(88, 187, 182);" [matMenuTriggerFor]="menuEExhibitions" #menuEExhibitionsTrigger="matMenuTrigger" (mouseenter)="menuEExhibitionsTrigger.openMenu()">Wall of Fame</button>
     <button mat-raised-button class="button" style="background-color:  rgb(125, 211, 143);min-width: 250px;" [matMenuTriggerFor]="menuMindmap" #menuMindmapTrigger="matMenuTrigger" (mouseenter)="menuMindmapTrigger.openMenu()">Mindmap/Concept-Maping</button>
   </mat-toolbar>
 

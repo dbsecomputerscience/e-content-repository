@@ -22,7 +22,7 @@ export class QuizesComponent implements OnInit {
   }
 
   goToQuizes(){
-    window.open('https://dbsequiz.web.app/home', "_blank");
+    window.open('https://dbsequiz.firebaseapp.com/home', "_blank");
   }
 
 }

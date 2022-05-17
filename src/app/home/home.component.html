@@ -3,8 +3,8 @@
     <ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
       <ng-template ngbSlide *ngFor="let item of images" >
         <span class="sr-only">I m here</span>
-        <div class="picsum-img-wrapper">
-          <img [src]="item.image" class="d-block w-100" style="height: 450px">
+        <div class="picsum-img-wrapper" >
+          <img [src]="item.image" class="d-block w-100" style="height: 100%;max-height: 407px">
         </div>
         <div class="carousel-caption">
           <h3 class="caption">{{item.caption}}</h3>

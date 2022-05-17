@@ -1,6 +1,47 @@
-<h2 style="text-align: center">Animated Videos</h2>
-<div>
+<h1 style="text-align: center;margin-top: 20px;">Animated Videos</h1>
+<form *ngIf="formVisible" (ngSubmit)="onSubmit(videoForm.value)" #videoForm="ngForm" style="text-align: center;"  autocomplete="off">
+  <mat-form-field appearance="fill" style="width: 400px;">
+    <mat-label>Select Grade</mat-label>
+    <mat-select [(ngModel)]="selectedGrade" name="grade">
+      <mat-option *ngFor="let grade of grades" [value]="grade.value">
+        {{grade.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br/><br/>
+  <mat-form-field appearance="fill"  style="width: 400px;">
+    <mat-label>Select Subject</mat-label>
+    <mat-select [(ngModel)]="selectedSubject" name="subject">
+      <mat-option *ngFor="let subject of subjects" [value]="subject.value">
+        {{subject.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div style="text-align: center;">
+    <button mat-flat-button  class="loginButton" type="submit">
+      Submit
+    </button>
+  </div>
+</form>
+
+<div *ngIf="videoData" class="row">
+  <div *ngFor="let video of videoData[0].videos">
+    <iframe width="320" height="215"
+    [src]="this._sanitizer.bypassSecurityTrustResourceUrl(video)">
+    </iframe>
+  </div>
+</div>
+
+<!-- <div>
   <iframe width="320" height="215"
-  src="https://www.youtube.com/embed/tgbNymZ7vqY">
+  src="https://www.youtube.com/watch?v=fE6Y7n-YUuU">
   </iframe>
 </div>
+<div>
+  <iframe width="320" height="215"
+  src="https://www.youtube.com/watch?v=VxBEmaaSh1c">
+  </iframe>
+</div>
+-->
+
+

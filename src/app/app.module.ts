@@ -30,6 +30,9 @@ import {MatCardModule} from '@angular/material/card';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 import {MatIconModule} from '@angular/material/icon';
+import {MatTreeModule} from '@angular/material/tree';
+import {MatSelectModule} from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -63,7 +66,10 @@ import {MatIconModule} from '@angular/material/icon';
     MatSidenavModule,
     MatCardModule,
     NgbModule,
-    MatIconModule
+    MatIconModule,
+    MatTreeModule,
+    MatSelectModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
