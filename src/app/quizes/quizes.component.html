@@ -1,6 +1,17 @@
-<div style="text-align: center;margin-top: 50px;">
-      <button mat-raised-button color="primary" class="quizbutton" (click)="goToQuizAdmin()">Admin Login</button>
-      <button mat-raised-button color="accent" class="quizbutton" (click)="goToQuizes()">Quizes</button>
+<div style="align-content: center;margin-top: 50px;width: 90%;" class="row d-flex justify-content-center">
+  <mat-card class="card" (click)="goToQuizAdmin()">
+    <img mat-card-image src="../../assets/images/admin.png" width="250px" height="165px" alt="Photo of a Shiba Inu">
+    <mat-card-content style="text-align: center;">
+      <h2>Admin</h2>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="card" (click)="goToQuizes()" (click)="goToQuizes()">
+    <img mat-card-image src="../../assets/images/quizzes.png" width="250px" height="165px" alt="Photo of a Shiba Inu">
+    <mat-card-content style="text-align: center;">
+      <h2>Quizzes</h2>
+    </mat-card-content>
+  </mat-card>
 </div>
 
 
